@@ -1,0 +1,53 @@
+#This script file contains different commands to get wp-cli up and running and to play around with it
+
+curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar 
+#downloads the phar file that you will install
+
+chmod +x wp-cli.phar
+#makes the phar file executable
+
+sudo mv wp-cli.phar /usr/local/bin/wp
+#moves the phar file to the bin and adds to path
+
+wp core download 
+#will download the latest version of WordPress into the current directory
+
+wp core install 
+#runs the standard WordPress installation process, with options like --url=somewebsite.com, --title=SomeWebsite, --admin_user=someusername, --admin_password=somepassword and --admin_email=some@email.com
+
+wp core multisite-install 
+#installs a new multisite WordPress installation
+
+wp core multisite-convert 
+#converts a regular installation into multisite
+
+wp core update 
+#will update WordPress to a newer version
+
+wp core update-db
+#will update the database
+
+#https://developer.wordpress.org/cli/commands/core/
+
+wp config list 
+#lists all the configuration variables
+
+wp config create 
+#creates configuration file with variables we provide, like wp config create --dbname=somedb --dbuser=someuser --dbpass=somepass
+
+wp config get
+#fetches specific variables from wp-config.php
+
+wp config get table_prefix
+#gets the table prefix
+
+wp config set 
+#sets the config variables
+
+#https://developer.wordpress.org/cli/commands/config
+
+#You should also look at `wp cap` for managing user roles and capabilities,`wp cron` for managing cron events,`wp cache` for handling the WP Object Cache
+
+#Other important commands are `wp db`, `wp eval`, `wp export`, `wp import`, `wp option`, `wp scaffold`, `wp rewrite`, `wp search-replace`, `wp shell`, `wp plugin`, `wp user` and `wp package`
+
+#http://wp-cli.org/package-index/
