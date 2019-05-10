@@ -7,14 +7,14 @@ cd public_html
 # Download the WP core
 wp core download
 # Configure database settings
-wp config create --dbname=example_website_dev --dbuser=root --dbpass=root
+wp config create --dbname=dev --dbuser=root --dbpass=root
 # Create the database
 wp db create
 # Install WP core
-wp core install --url='http://example-website.dev' --title='Example Website' --admin_user=admin --admin_password=admin --admin_email=admin@example-website.dev
+wp core install --url='http://wclos.dev' --title='WCLOS' --admin_user=admin --admin_password=admin --admin_email=admin@wclos.dev
 
 # Change the website's description
-wp option update blogdescription 'Just another Example Website'
+wp option update blogdescription 'Just another WCLOS Website'
 # Set the time zone
 wp option update timezone_string 'America/Los_Angeles'
 
@@ -23,16 +23,11 @@ wp plugin delete akismet
 wp plugin delete hello
 
 # Install a theme from wordpress.org theme directory
-wp theme install sydney
+wp theme install twentyten
 # Create a child theme
-wp scaffold child-theme my-theme --parent_theme=sydney
+wp scaffold child-theme my-theme --parent_theme=twentyten
 # Activate the child theme
 wp theme activate my-theme
-
-# Install required plugins for the theme
-wp plugin install siteorigin-panels --activate
-wp plugin install sydney-toolbox --activate
-
 
 # Trash the 'Hello world!' post
 wp post delete 1
