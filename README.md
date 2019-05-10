@@ -1,6 +1,6 @@
 # Deep Dive Into WP-CLI
 
-This repo was created for my talk at [WordCamp Lagos 2019](2019.lagos.wordcamp.org).
+This repo was created for my talk at [WordCamp Lagos 2019](http://2019.lagos.wordcamp.org).
 
 The pdf file is the lecture notes.
 
